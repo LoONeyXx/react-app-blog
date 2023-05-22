@@ -1,0 +1,203 @@
+@import '../fonts/fonts.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+    background: orange; /* цвет дорожки */
+    border-radius:3px; /* закругления плашки */
+    margin:1px 0;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(25, 25, 107); /* цвет плашки */
+    border-radius: 3px; /* закругления плашки */
+}
+body {
+    color: wheat;
+    background-color: rgba(2, 46, 2, 0.712);
+}
+
+#root {
+    padding: 30px;
+    font-family: 'Inter';
+    border: 1px solid black;
+    background-color: rgba(20, 49, 158, 0.712);
+    border-bottom: none;
+    border-top: none;
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.count {
+    border: 1px solid wheat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    border-radius: 15px;
+    position: absolute;
+    top: -20px;
+    right: -10px;
+    padding: 2px;
+}
+
+.popup {
+    width: 30%;
+    height: 30%;
+    position: fixed;
+    background-color: rgba(41, 29, 8, 0.932);
+    top: 0;
+    right: 35%;
+    transform: translate(0, -100%);
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    padding: 10px 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.popup__item-price {
+    width: 60px;
+    flex-shrink: 0;
+    text-align: end;
+}
+
+.popup__container {
+    padding: 10px 0 15px;
+    flex-grow: 1;
+    width: 95%;
+    height: 95%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow-y: auto;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+
+.popup__container::-webkit-scrollbar {
+    width: 12px; /* ширина scrollbar */
+}
+.popup__container::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0); /* цвет дорожки */
+    border-radius:3px; /* закругления плашки */
+    margin:20px 0;
+}
+
+.popup__container::-webkit-scrollbar-thumb {
+    background-color: rgba(14, 82, 76, 0.623); /* цвет плашки */
+    border-radius: 3px; /* закругления плашки */
+}
+
+.popup__item {
+    padding: 5px;
+    cursor: pointer;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    min-height: 40px;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    margin-right:4px;
+}
+
+.popup__item:hover {
+    border: 1px solid wheat;
+}
+
+.popup__item-title {
+    font-size: 12px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.total {
+    flex-shrink: 0;
+    align-self: end;
+}
+
+.popup__item-image {
+    min-width: 30px;
+    height: 100%;
+    border-radius: 10px;
+    background-size: 100% 100%;
+}
+
+.popup_opened {
+    transform: translate(0, 0);
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid rgb(220, 212, 205);
+    border-radius: 3em;
+    cursor: pointer;
+    position: relative;
+}
+
+.icon:hover {
+    background-color: rgba(18, 94, 47, 0.584);
+}
+
+.title {
+    max-width: 350px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 36px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 100px;
+    min-width: 20%;
+    margin: 50px auto;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.joke {
+    display: flex;
+    color: rgb(214, 81, 19);
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 80%;
+    min-width: 50px;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: 1px solid wheat;
+    padding: 10px 0;
+    border-top: 1px solid wheat;
+}
